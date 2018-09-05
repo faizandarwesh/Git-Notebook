@@ -1,0 +1,152 @@
+> cd  (Change Directory)
+
+> pwd (print working directory)
+
+> mkdir (make new directory)
+
+> ls  (list files and folders)
+
+> rm or rmdir (remove files and directories)
+
+
+
+> Working directory (Where all the files are stored)
+
+> Staging index (Those files which we want to move to repository we move those files into staging index)
+
+> Repository (When commit command executes all the files from staging index move to repository and then will be unique id by using SHA assign to each file or doc)
+
+
+> git init (Create a new repository)
+
+> git clone (Copy an existing repository)
+
+> git status (Give repo details like commits details etc)
+
+> git add (to stage files)
+
+> git add . (used to stage all files at once)
+
+> git config user.name (OR) user.email to check username and email
+
+> git reset (used to delete files that are committed)
+
+> git remote add origin (alias) < repo-url >  //to use alias
+now we can use git push origin <branch-name> instead of repo-url now we can just type alias
+
+> git rm --cached <file-name> (used to unstage file)
+
+> git push <url> <branch-name> {Used to push code to Github}
+
+> git pull <alias> <branch-name> (to keep the repo up-to-date)
+
+
+			#GIT LOG		
+
+> Git log (Display information about existing commits)
+git log display SHA,Author name who made commit,Date of commit and
+Message or title of commit
+
+* git log --oneline (show just imp info in oneline)
+* git log --stat (show which files change or some insertion and deletion details)
+* git log -p (used to display the actual changes made to a file)
+* git log -p (SHA) (to get particular commit details)
+
+			<GIT SHOW>
+
+> Git show (Display information about given commits)
+The output of the git show command is exactly the same as the git log -p command.
+* git show (SHA) {it show just one commit having that SHA}
+
+> Git add (Add files from the working directory to the staging index)
+
+> Git commit (Take files from staging index and save them in the repository)
+
+> Git diff (Display the difference b/w two versions of a file)
+
+> git rm --cached (it just removes it from the Staging Index).
+*Moving a file from the Staging Index back to the Working Directory will unstage the file.
+
+> Git add . (used to stage the remaining files )
+
+> touch <file-name> {To create file inside Working directory using Terminal}
+ 
+> .gitignore concept 
+
+> globbing concept
+
+		#GIT TAG 
+
+> git tag (add tag to specific commit that indicate useful info)
+syntax : git tag -a (tag-name)
+
+> git tag command will display all tags that are in the repository.
+
+> Command for deleting a tag
+  git tag -d <tag-name>
+
+> add tag to past commit
+  Command : git tag -a (tag-name)  SHA
+
+		#GIT CHECKOUT
+
+> git checkout (use to switch b/w different branches and tags)
+
+> Head pointer points the current branch .
+
+>  git checkout <branch-name>  {then Head pointer point to that branch}
+    	
+
+
+		#BRANCH
+
+> By default there is only one branch called master . So Head pointer point to that branch
+   head pointer point to the branch who is active at that time. and we can create more branches 
+
+> Command : git branch (it will list out the branches in a repository)
+
+> Command : git branch <branch-name> (it will create a branch of that name)
+
+> Command : git branch -d <branch-name> (use to delete branch)
+
+> Commang  : git checkout -b <branch-name> (use to create and switch to new branch)
+
+> Key points : 
+But inorder to delete a branch you have to switch from that branch bcz you can't delete a branch which is active. It is also a noteable point that you cannot delete a branch which have unique commits that means it you want to delete a branch but that branch's commits are not stored in any other branch so you have to use this command inorder to force deletion.
+
+
+> git branch -D <branch-name>  {FORCE-DELETION}
+
+
+			#GIT MERGE
+
+The git merge command is used to combine Git branches:
+
+$ git merge <name-of-branch-to-merge-in>
+
+
+
+			#GIT REPOSITORY 
+
+There are 2 ways to create a repo
+
+1st from scratch by using Github we have to go to site and choose create new repo option then fill the details and the hit the create repo button then wo have an option on left to clone from where we copy that link and in git bash terminal we type git clone <link> and hit enter then the repository will be clone and save in our system.
+
+In 2nd way we create a repo using git init and then push code to the remote repo by create a repo on site using same name and then by using  push and commits we push that code and all the changes to the repo
+ 
+//Some key concept
+
+The best part is that if a group of developers used github for their project they create a unique branch instead of master and do all the work on that unique branch after completing the work they stage and then commit the code after switching from master to that particular branch and push the code to github and then create a pull request to merge that branch into master if his request is suitable for all the group then his request is approve and the code merge into master and then unique branch will be deleted.
+
+//FORK Concept
+Developers jo hen wo apny kuch projects open-source rkhty hen incase agr koi aur developer un mai koi acha feature add krna chahy to krsky so . hmy agr koi aesa open source project milta h jis mai hmy lgta h hm uxay improve krskty hen to hm ux project ko ux k author k project c fork  krlete hen jis c ux project ki replica hmare apne profile p ajate h phr hm uxey clone kr k edit kr k stage krty hen then commit phr ux k bd push krdete hen code apni profile p aur aik pull request create krte hen jo ux project k original author k pass jate h aur agy uxey lgta h k aap ny jo changes ki hen wo ache hen to wo pull request accept krlega aur merge krdega to wahan wo apki changes update hojaenge. 
+
+
+//PERFECT WAY OR MY WAY TO UPLOAD PROJECTS ON GITHUB
+sb sy pehly aik folder bnao jis mai projects rkhny hen sare then ux folder ko khol k git bash here kro then git init kro then ux folder m projects copypaste krdo and then git add . kro then git commit phr githhub site p ja k new repo create kro and uxka link copy krlo and git bash mai akar git push and then link and branch name enter kr k button press kro enter ka bx project add hogaya github p
+
+
+// INORDER TO ADD IMAGES TO README.md file
+![](path/imagename.format) 
+
+			
