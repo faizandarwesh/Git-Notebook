@@ -27,6 +27,12 @@
 
 > git add . (used to stage all files at once)
 
+> git config --global user.name "user-name" 
+
+> git config --global user.email "user-email"
+
+> git help 
+
 > git config user.name (OR) user.email to check username and email
 
 > git reset (used to delete files that are committed)
